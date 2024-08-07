@@ -6,6 +6,7 @@
 #   RRoot,1/1/2030,Created Script
 #   MClark,8/5/2024,input empty classes
 #   MClark,8/5/2024,Filled class with functions
+#   MClark,8/7/2024,Fixed variables
 # ------------------------------------------------------------------------------------------ #
 import json
 
@@ -27,8 +28,8 @@ FILE_NAME: str = "Enrollments.json"
 # course_name: str = ''  # Holds the name of a course entered by the user.
 # json_data: str = ''  # Holds combined string data in a json format.
 # file = None  # Holds a reference to an opened file.
-# menu_choice: str  # Hold the choice made by the user.
-student_data: dict = {}  # one row of student data
+# student_data: dict = {}  # one row of student data
+menu_choice: str  # Hold the choice made by the user.
 students: list = []  # a table of student data
 
 
