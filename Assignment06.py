@@ -7,6 +7,7 @@
 #   MClark,8/5/2024,input empty classes
 #   MClark,8/5/2024,Filled class with functions
 #   MClark,8/7/2024,Fixed variables
+#   MCLark, 8/7/2024,Changed data display for writing data to file
 # ------------------------------------------------------------------------------------------ #
 import json
 
@@ -86,11 +87,8 @@ class FileProcessor:
             file = open(file_name, "w")
             json.dump(student_data, file, indent=1)
             file.close()
-            print("The following data is saved:\n")
-            print("*" * 40)
-            for student in student_data:
-                print(f"{student["FirstName"]} {student["LastName"]} is enrolled in {student["CourseName"]}")
-            print("*" * 40)
+            print("The following data has been saved:\n")
+            IO.output_student_courses(student_data=students)
         except TypeError as e:
             IO.output_error_messages("File save requires a valid JSON format.", e)
         except Exception as e:
