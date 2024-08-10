@@ -3,11 +3,12 @@
 # Desc: This assignment demonstrates using functions
 # with structured error handling
 # Change Log: (Who, When, What)
-#   RRoot,1/1/2030,Created Script
+#   RRoot,1/1/2030,Created Scrzipt
 #   MClark,8/5/2024,input empty classes
 #   MClark,8/5/2024,Filled class with functions
 #   MClark,8/7/2024,Fixed variables
 #   MCLark, 8/7/2024,Changed data display for writing data to file
+#   MCLark, 8/9/2024,After another test, edited data display for writing data to file again
 # ------------------------------------------------------------------------------------------ #
 import json
 
@@ -186,6 +187,8 @@ class IO:
             course_name = input("Please enter the \033[1mcourse name\033[0m: ").strip()
             if not len(course_name) > 2:
                 raise ValueError("Course name must be at least 3 characters.")
+            print(f"{student_first_name} {student_last_name} is enrolled in {course_name}")
+
             student_data = {"FirstName": student_first_name, "LastName": student_last_name, "CourseName": course_name}
             students.append(student_data)
         # If inputs do not meet criteria, display error
@@ -214,7 +217,6 @@ while (True):
 
     # Present the current data
     elif menu_choice == "2":
-        IO.output_student_courses(student_data=students)
         continue
 
     # Save the data to a file
